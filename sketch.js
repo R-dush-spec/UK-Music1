@@ -539,8 +539,8 @@ function draw() {
   );
 } else if (displayMode === 1) {
   setUIText(
-    "Tap the record to play the song",
-    ""
+    "",
+    "Tap the record to play the song"
   );
 } else if (displayMode === 2) {
   setUIText(
