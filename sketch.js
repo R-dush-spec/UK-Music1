@@ -528,19 +528,34 @@ function drawAvatarOverlayZoom(t) {
 function draw() {
   // --- UI text (HTML overlay) ---
   if (displayMode === -2) {
-    setUIText("Hold your smartphone on the screen.\nTap the screen to continue");
-  } else if (displayMode === -1) {
-    setUIText("Let's discover songs you don't know from others' perspectives.\nTap to skip");
-  } else if (displayMode === 1) {
-    setUIText("Tap the record to play the song");
-  } else if (displayMode === 2) {
-    setUIText("If you like it, tap the record");
-  } else if (displayMode === 3) {
-    setUIText("Hold your smartphone on the screen.\nTap the black area to return");
-  } else {
-    // displayMode === 0 (バブル通常) など、文字を消したいとき
-    setUIText("");
-  }
+  setUIText(
+    "Hold your smartphone on the screen.",
+    "Tap the screen to continue"
+  );
+} else if (displayMode === -1) {
+  setUIText(
+    "Let's discover songs you don't know from others' perspectives.",
+    "Tap to skip"
+  );
+} else if (displayMode === 1) {
+  setUIText(
+    "Tap the record to play the song",
+    ""
+  );
+} else if (displayMode === 2) {
+  setUIText(
+    "",
+    "If you like it, tap the record"
+  );
+} else if (displayMode === 3) {
+  setUIText(
+    "Hold your smartphone on the screen.",
+    "Tap the black area to return"
+  );
+} else {
+  setUIText("", "");
+}
+
 
   // --- ここから下は、今までの draw() のまま ---
   background(5, 10, 20);
