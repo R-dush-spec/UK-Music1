@@ -303,8 +303,7 @@ class Bubble {
     const depthScale = map(this.z, -1500, 500, 0.3, 1.2);
     let detail = int(map(depthScale, 0.3, 1.2, 12, 32));
     detail = constrain(detail, 10, 34);
-    sphereDetail(detail);
-    sphere(r);
+    sphere(r, 24, 16);
 
     // Softer rim (drawn as 2D ring in current transform plane)
     push();
