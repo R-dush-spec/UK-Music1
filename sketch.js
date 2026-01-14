@@ -30,6 +30,14 @@ window.addEventListener("error", (e) => {
     "</pre>";
 });
 
+let uiTextEl = null;
+
+function setUIText(msg) {
+  if (!uiTextEl) uiTextEl = document.getElementById("uiText");
+  if (!uiTextEl) return;
+  uiTextEl.textContent = msg || "";
+}
+
 /* =====================================================
    Interactive Bubble + ECG Intro (p5.js port)
    - WEBGL bubbles + 2D HUD overlays
