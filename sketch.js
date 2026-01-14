@@ -568,7 +568,7 @@ function drawECGScreen(micLevel01) {
     const p = ecgPoints[i];
     const x = p.x + ecgOffset;
     const y = p.y;
-    if (x > -50 && x < width + 50) vertex(x, y);
+    if (x > -50 && x < width + 50) vertex(x, y, 0);
   }
   endShape();
 
@@ -579,7 +579,7 @@ function drawECGScreen(micLevel01) {
     const p = ecgPoints[i];
     const x = p.x + ecgOffset;
     const y = p.y;
-    if (x > -50 && x < width + 50) vertex(x, y);
+    if (x > -50 && x < width + 50) vertex(x, y, 0);
   }
   endShape();
 
@@ -590,7 +590,7 @@ function drawECGScreen(micLevel01) {
     const p = ecgPoints[i];
     const x = p.x + ecgOffset;
     const y = p.y;
-    if (x > -50 && x < width + 50) vertex(x, y);
+    if (x > -50 && x < width + 50) vertex(x, y, 0);
   }
   endShape();
 
