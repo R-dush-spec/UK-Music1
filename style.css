@@ -39,7 +39,7 @@ canvas {
 #uiSub{
   position: absolute;
   left: 50%;
-  top: 78%;
+  top: 85%;
   transform: translate(-50%, -50%);
   width: min(900px, calc(100vw - 48px));
   text-align: center;
