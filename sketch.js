@@ -30,13 +30,18 @@ window.addEventListener("error", (e) => {
     "</pre>";
 });
 
-let uiTextEl = null;
+let uiMainEl = null;
+let uiSubEl  = null;
 
-function setUIText(msg) {
-  if (!uiTextEl) uiTextEl = document.getElementById("uiText");
-  if (!uiTextEl) return;
-  uiTextEl.textContent = msg || "";
+function setUIText(main, sub) {
+  if (!uiMainEl) uiMainEl = document.getElementById("uiMain");
+  if (!uiSubEl)  uiSubEl  = document.getElementById("uiSub");
+  if (!uiMainEl || !uiSubEl) return;
+
+  uiMainEl.textContent = main || "";
+  uiSubEl.textContent  = sub  || "";
 }
+
 
 /* =====================================================
    Interactive Bubble + ECG Intro (p5.js port)
