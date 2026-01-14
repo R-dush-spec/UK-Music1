@@ -1,10 +1,3 @@
-window.addEventListener("error", (e) => {
-  document.body.innerHTML =
-    "<pre style='white-space:pre-wrap;color:#fff;background:#000;padding:16px;'>" +
-    "JS Error:\n" + (e.message || e.error || e) +
-    "\n\n" + (e.filename || "") + ":" + (e.lineno || "") +
-    "</pre>";
-});
 // --- Safari-safe replacement for p5.js hint() depth test toggles ---
 const DISABLE_DEPTH_TEST = 0;
 const ENABLE_DEPTH_TEST  = 1;
@@ -16,6 +9,14 @@ function hint(mode) {
   if (mode === DISABLE_DEPTH_TEST) gl.disable(gl.DEPTH_TEST);
   if (mode === ENABLE_DEPTH_TEST)  gl.enable(gl.DEPTH_TEST);
 }
+
+window.addEventListener("error", (e) => {
+  document.body.innerHTML =
+    "<pre style='white-space:pre-wrap;color:#fff;background:#000;padding:16px;'>" +
+    "JS Error:\n" + (e.message || e.error || e) +
+    "\n\n" + (e.filename || "") + ":" + (e.lineno || "") +
+    "</pre>";
+});
 
 /* =====================================================
    Interactive Bubble + ECG Intro (p5.js port)
