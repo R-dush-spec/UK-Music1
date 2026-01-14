@@ -1,0 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #050a14;
+  overflow: hidden; /* iPadでスクロールしない */
+  touch-action: none; /* タッチのブラウザジェスチャ抑制 */
+}
+
+canvas {
+  display: block;
+}
