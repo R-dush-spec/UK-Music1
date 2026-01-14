@@ -1,3 +1,11 @@
+window.addEventListener("error", (e) => {
+  document.body.innerHTML =
+    "<pre style='white-space:pre-wrap;color:#fff;background:#000;padding:16px;'>" +
+    "JS Error:\n" + (e.message || e.error || e) +
+    "\n\n" + (e.filename || "") + ":" + (e.lineno || "") +
+    "</pre>";
+});
+
 /* =====================================================
    Interactive Bubble + ECG Intro (p5.js port)
    - WEBGL bubbles + 2D HUD overlays
