@@ -5,6 +5,17 @@ window.addEventListener("error", (e) => {
     "\n\n" + (e.filename || "") + ":" + (e.lineno || "") +
     "</pre>";
 });
+// --- Safari-safe replacement for p5.js hint() depth test toggles ---
+const DISABLE_DEPTH_TEST = 0;
+const ENABLE_DEPTH_TEST  = 1;
+
+function hint(mode) {
+  const gl = drawingContext; // WEBGL context
+  if (!gl || !gl.disable || !gl.enable) return;
+
+  if (mode === DISABLE_DEPTH_TEST) gl.disable(gl.DEPTH_TEST);
+  if (mode === ENABLE_DEPTH_TEST)  gl.enable(gl.DEPTH_TEST);
+}
 
 /* =====================================================
    Interactive Bubble + ECG Intro (p5.js port)
