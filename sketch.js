@@ -530,7 +530,7 @@ function draw() {
   if (displayMode === -2) {
   setUIText(
     "Touch the screen with your smartphone.",
-    "discver new music"
+    "discover new music"
   );
 } else if (displayMode === -1) {
   setUIText(
