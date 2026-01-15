@@ -529,8 +529,8 @@ function draw() {
   // --- UI text (HTML overlay) ---
   if (displayMode === -2) {
   setUIText(
-    "Hold your smartphone on the screen.",
-    "Tap the screen to continue"
+    "Touch the screen with your smartphone.",
+    "discver new music"
   );
 } else if (displayMode === -1) {
   setUIText(
