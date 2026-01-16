@@ -549,7 +549,7 @@ function draw() {
   );
 } else if (displayMode === 3) {
   setUIText(
-    "To save your favrite music, /n hold your smartphone on the screen.",
+    "To save your favorite music, hold your smartphone on the screen.",
     "Tap the black area to return"
   );
 } else {
